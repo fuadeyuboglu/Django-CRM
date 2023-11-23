@@ -3,7 +3,14 @@
 {% block content %}
 
 <div class="col-md-6 offset-md-3">
-    <h1>Hello World!</h1>
+
+    <h1>Login</h1>
+
+    <form method="POST" action="{% url 'home' %}">
+        <!-- cross-site request forgery token -->
+        {% csrf_token %}
+        
+    </form>
 </div>
 
 
