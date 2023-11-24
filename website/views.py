@@ -2,11 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
-from .models import Records
+from .models import Record
 
 
 def home(request):
-    records = Records.objects.all()
+    records = Record.objects.all()
 
     # Check to see if loggin in
     if request.method == 'POST':
