@@ -72,4 +72,4 @@ def delete_record(request, pk):
 
 
 def add_record(request):
-    return(request, 'add_record.html', {})
+    return render(request, 'add_record.html', {})
