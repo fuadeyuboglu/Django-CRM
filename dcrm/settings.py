@@ -122,4 +122,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CSRF Trusted Origins
 
-CSRF_TRUSTED_ORIGINS = ['https://django-dcrm.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://django-dcrm.up.railway.app']
+
+CSRF_ALLOWED_ORIGINS = ['https://django-dcrm.up.railway.app']
+CORS_ORIGINS_WHITELIST = ['https://django-dcrm.up.railway.app']
