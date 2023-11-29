@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
@@ -31,6 +32,7 @@ def logout_user(request):
     return redirect('home')
 
 
+@csrf_protect
 def register_user(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -71,6 +73,7 @@ def delete_record(request, pk):
         return redirect('home')
 
 
+@csrf_protect
 def add_record(request):
     form = AddRecordForm(request.POST or None)
     if request.user.is_authenticated:
@@ -85,6 +88,7 @@ def add_record(request):
         return redirect('home')
     
 
+@csrf_protect
 def update_record(request, pk):
     if request.user.is_authenticated:
         current_record = Record.objects.get(id=pk)
