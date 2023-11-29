@@ -66,11 +66,11 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'supplies',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'Zxv^*&^Bv1b83-8x',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'PASSWORD': '2-gB14ce-dHG21FCaEddhd4d64abDdhE',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '50029',
     }
 }
 
