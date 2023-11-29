@@ -5,7 +5,7 @@ from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
 
-
+@csrf_protect
 def home(request):
     records = Record.objects.all()
 
